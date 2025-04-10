@@ -15,7 +15,7 @@ Uma API RESTful para gerenciamento de transações com autenticação JWT.
 
 ## Design Patterns e Boas Práticas
 
-O projeto foi desenvolvido seguindo padrões de design e boas práticas que facilitam a manutenção, escalabilidade e testabilidade do código:
+O projeto foi desenvolvido almejando seguir padrões de design e boas práticas que facilitam a manutenção, escalabilidade e testabilidade do código:
 
 ### Arquitetura em Camadas
 O sistema é organizado em camadas com responsabilidades bem definidas:
@@ -31,13 +31,13 @@ Implementado para abstrair e encapsular o acesso aos dados, permitindo uma separ
 Utilizado para garantir a consistência das transações de banco de dados, agrupando operações relacionadas em uma única unidade atômica de trabalho.
 
 ### Dependency Injection
-Aplicado para reduzir o acoplamento entre os componentes do sistema, facilitar testes unitários e melhorar a manutenibilidade do código.
+Utilizado para injetar dependências através de interfaces, reduzindo o acoplamento entre componentes e facilitando a substituição de implementações.
 
 ### DTO Pattern (Data Transfer Objects)
 Implementado para transferir dados entre as camadas do sistema, evitando a exposição direta das entidades e melhorando a segurança.
 
 ### Middleware Pattern
-Utilizado para processar requisições HTTP, implementando funcionalidades como autenticação, autorização e tratamento de exceções.
+Utilizado para processar o tratamento de exceções de forma centralizada.
 
 ### Entity Mapping
 Implementado com AutoMapper para facilitar a conversão entre entidades do domínio e DTOs, reduzindo código repetitivo.
