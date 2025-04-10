@@ -13,6 +13,35 @@ Uma API RESTful para gerenciamento de transações com autenticação JWT.
 - BCrypt.Net-Next
 - CSVHelper
 
+## Design Patterns e Boas Práticas
+
+O projeto foi desenvolvido seguindo padrões de design e boas práticas que facilitam a manutenção, escalabilidade e testabilidade do código:
+
+### Arquitetura em Camadas
+O sistema é organizado em camadas com responsabilidades bem definidas:
+- **Controllers**: Responsáveis por receber requisições HTTP e retornar respostas apropriadas
+- **Services**: Implementam a lógica de negócio da aplicação
+- **Repositories**: Gerenciam o acesso aos dados
+- **Models**: Representam as entidades do domínio
+
+### Repository Pattern
+Implementado para abstrair e encapsular o acesso aos dados, permitindo uma separação clara entre a lógica de negócio e a camada de persistência.
+
+### Unit of Work Pattern
+Utilizado para garantir a consistência das transações de banco de dados, agrupando operações relacionadas em uma única unidade atômica de trabalho.
+
+### Dependency Injection
+Aplicado para reduzir o acoplamento entre os componentes do sistema, facilitar testes unitários e melhorar a manutenibilidade do código.
+
+### DTO Pattern (Data Transfer Objects)
+Implementado para transferir dados entre as camadas do sistema, evitando a exposição direta das entidades e melhorando a segurança.
+
+### Middleware Pattern
+Utilizado para processar requisições HTTP, implementando funcionalidades como autenticação, autorização e tratamento de exceções.
+
+### Entity Mapping
+Implementado com AutoMapper para facilitar a conversão entre entidades do domínio e DTOs, reduzindo código repetitivo.
+
 ## Pré-requisitos
 
 - [.NET SDK](https://dotnet.microsoft.com/download) (versão 8.0 ou superior)
